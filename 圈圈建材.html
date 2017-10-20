@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://www.xiaokaikai.cn/jc/ -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>圈圈建材</title>
+    <!--处理兼容-->
+    <!--[if lt IE 9]>
+    <script src="all/html5shiv.min.js"></script>
+    <script src="all/respond.min.js"></script>
+    <![endif]-->
+
+    <!--核心组件-->
+    <link rel="stylesheet" href="./圈圈建材_files/swiper.min.css">
+    <script src="./圈圈建材_files/swiper.min.js.下载"></script>
+        <!--类库核心组件-简化版的jquery-->
+    <script src="./圈圈建材_files/zepto.min.js.下载"></script>
+    <script src="./圈圈建材_files/selector.js.下载"></script>
+    <!--自己的样式与特效-->
+    <link rel="stylesheet" href="./圈圈建材_files/common.css">
+    <link rel="stylesheet" href="./圈圈建材_files/index.css">
+    <script src="./圈圈建材_files/index.js.下载"></script>
+</head>
+<body>
+
+<div id="animated_div">请用手机打开网页</div>
+<!--最先加载结构-->
+<div class="fullPage">
+    <div class="fullPage_pic"><img src="http://www.xiaokaikai.cn/jc/images/jiazai06.png" alt=""></div>
+    <p>页面加载中......</p>
+</div>
+<!--页面加载中-->
+<script>
+    $(document).ready(function(){//结构加载完就执行
+        $("fullPage").css("display","block");
+        var $fullPagePic=$(".fullPage_pic");
+        function refresh(){
+            setTimeout(function () {
+                $fullPagePic.html("<img src='images/jiazai02.png'alt=''/>");
+            },0);
+            setTimeout(function () {
+                $fullPagePic.html("<img src='images/jiazai03.png'alt=''/>");
+            },300);
+            setTimeout(function () {
+                $fullPagePic.html("<img src='images/jiazai04.png'alt=''/>");
+            },600);
+            setTimeout(function () {
+                $fullPagePic.html("<img src='images/jiazai05.png'alt=''/>");
+            },900);
+            setTimeout(function () {
+                $fullPagePic.html("<img src='images/jiazai06.png'alt=''/>");
+            },1200);
+            setTimeout(function () {
+                $fullPagePic.html("<img src='images/jiazai07.png'alt=''/>");
+            },1500);
+            setTimeout(function () {
+                $fullPagePic.html("<img src='images/jiazai01.png'alt=''/>");
+            },1800);
+        }
+
+        setInterval(function () {
+            refresh();
+        },1800);
+    });
+    window.onload=function () {//结构图片等引用的都加载完在执行
+        $("fullPage").css("display","none");
+    }
+</script>
+
+<!--项目容器-->
+<div class="qq_layout" id="qq_layout">
+    <!--头部透明固定-->
+    <div class="qq_header">
+        <div class="qq_header_left f_left"></div>
+        <div class="qq_header_center f_left">圈圈建材</div>
+        <div class="qq_header_right f_right">
+            <a href="http://www.xiaokaikai.cn/jc/zixunliebiao.html" class="qq_header_m">
+                <img src="./圈圈建材_files/xiaoxi.png" alt="">
+                <i></i>
+            </a>
+            <a href="http://www.xiaokaikai.cn/jc/#" class="qq_header_s">
+                <img src="./圈圈建材_files/sousuo.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!--首页主轮播图-->
+    <div class="qq_banner">
+        <!-- 轮播图-->
+        <div class="swiper-container swiper-container-horizontal" id="swiper_one">
+            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-750px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="2" style="width: 375px;"><a href="http://www.xiaokaikai.cn/jc/#"><img src="./圈圈建材_files/banner1.png" alt=""></a></div>
+                <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="0" style="width: 375px;"><a href="http://www.xiaokaikai.cn/jc/#"><img src="./圈圈建材_files/banner1.png" alt=""></a></div>
+                <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" style="width: 375px;"><a href="http://www.xiaokaikai.cn/jc/#"><img src="./圈圈建材_files/banner1.png" alt=""></a></div>
+                <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="2" style="width: 375px;"><a href="http://www.xiaokaikai.cn/jc/#"><img src="./圈圈建材_files/banner1.png" alt=""></a></div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="width: 375px;"><a href="http://www.xiaokaikai.cn/jc/#"><img src="./圈圈建材_files/banner1.png" alt=""></a></div></div>
+            <!-- 动态创建点盒子-->
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span></div>
+        </div>
+    </div>
+    <!-- 轮播图构造实例，设置功能-->
+    <script>
+        var swiper = new Swiper('#swiper_one', {
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            paginationClickable: true,
+            spaceBetween: 0,
+            centeredSlides: true,
+            loop: true,
+            autoplay: 2500,//定时器
+            autoplayDisableOnInteraction: false
+        });
+    </script>
+
+    <nav class="qq_nav">
+        <!-- 滚动菜单-->
+        <div class="swiper-container swiper-container-horizontal swiper-container-multirow" id="swiper_four">
+            <div class="swiper-wrapper" style="transition-duration: 0ms; width: 450px; transform: translate3d(0px, 0px, 0px);">
+                <div class="swiper-slide swiper-slide-active" data-swiper-column="0" data-swiper-row="0" style="order: 0; width: 75px;">
+                    <a href="http://www.xiaokaikai.cn/jc/chanpinerjilanmuliebiao.html">
+                        <i><img src="./圈圈建材_files/youqi.png" alt=""></i>
+                        <span>首页</span>
+                    </a>
+                </div>
+                <div class="swiper-slide swiper-slide-next" data-swiper-column="0" data-swiper-row="1" style="-webkit-box-ordinal-group: 6; order: 6; margin-top: 0px; width: 75px;">
+                    <a href="http://www.xiaokaikai.cn/jc/chanpinerjilanmuliebiao.html">
+                        <i><img src="./圈圈建材_files/menye.png" alt=""></i>
+                        <span>首页</span>
+                    </a>
+                </div>
+                <div class="swiper-slide" data-swiper-column="1" data-swiper-row="0" style="-webkit-box-ordinal-group: 1; order: 1; width: 75px;">
+                    <a href="http://www.xiaokaikai.cn/jc/chanpinerjilanmuliebiao.html">
+                        <i><img src="./圈圈建材_files/dengguang.png" alt=""></i>
+                        <span>首页</span>
+                    </a>
+                </div>
+                <div class="swiper-slide" data-swiper-column="1" data-swiper-row="1" style="-webkit-box-ordinal-group: 7; order: 7; margin-top: 0px; width: 75px;">
+                    <a href="http://www.xiaokaikai.cn/jc/chanpinerjilanmuliebiao.html">
+                        <i><img src="./圈圈建材_files/diban.png" alt=""></i>
+                        <span>首页</span>
+                    </a>
+                </div>
+                <div class="swiper-slide" data-swiper-column="2" data-swiper-row="0" style="-webkit-box-ordinal-group: 2; order: 2; width: 75px;">
+                    <a href="http://www.xiaokaikai.cn/jc/chanpinerjilanmuliebiao.html">
+                        <i><img src="./圈圈建材_files/diaoding.png" alt=""></i>
+                        <span>首页</span>
+                    </a>
+                </div>
+                <div class="swiper-slide" data-swiper-column="2" data-swiper-row="1" style="-webkit-box-ordinal-group: 8; order: 8; margin-top: 0px; width: 75px;">
+                    <a href="http://www.xiaokaikai.cn/jc/chanpinerjilanmuliebiao.html">
+                        <i><img src="./圈圈建材_files/jiaju.png" alt=""></i>
+                        <span>首页</span>
+                    </a>
+                </div>
+                <div class="swiper-slide" data-swiper-column="3" data-swiper-row="0" style="-webkit-box-ordinal-group: 3; order: 3; width: 75px;">
+                    <a href="http://www.xiaokaikai.cn/jc/chanpinerjilanmuliebiao.html">
+                        <i><img src="./圈圈建材_files/jiadian.png" alt=""></i>
+                        <span>首页</span>
+                    </a>
+                </div>
+                <div class="swiper-slide" data-swiper-column="3" data-swiper-row="1" style="-webkit-box-ordinal-group: 9; order: 9; margin-top: 0px; width: 75px;">
+                    <a href="http://www.xiaokaikai.cn/jc/chanpinerjilanmuliebiao.html">
+                        <i><img src="./圈圈建材_files/chuanghu.png" alt=""></i>
+                        <span>首页</span>
+                    </a>
+                </div>
+                <div class="swiper-slide" data-swiper-column="4" data-swiper-row="0" style="-webkit-box-ordinal-group: 4; order: 4; width: 75px;">
+                    <a href="http://www.xiaokaikai.cn/jc/chanpinerjilanmuliebiao.html">
+                        <i><img src="./圈圈建材_files/guancai.png" alt=""></i>
+                        <span>首页</span>
+                    </a>
+                </div>
+                <div class="swiper-slide" data-swiper-column="4" data-swiper-row="1" style="-webkit-box-ordinal-group: 10; order: 10; margin-top: 0px; width: 75px;">
+                    <a href="http://www.xiaokaikai.cn/jc/chanpinerjilanmuliebiao.html">
+                        <i><img src="./圈圈建材_files/peijian.png" alt=""></i>
+                        <span>首页</span>
+                    </a>
+                </div>
+                <div class="swiper-slide" data-swiper-column="5" data-swiper-row="0" style="-webkit-box-ordinal-group: 5; order: 5; width: 75px;">
+                    <a href="http://www.xiaokaikai.cn/jc/chanpinerjilanmuliebiao.html">
+                        <i><img src="./圈圈建材_files/peijian.png" alt=""></i>
+                        <span>首页</span>
+                    </a>
+                </div>
+             
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span></div>
+        </div>
+    </nav>
+    <script>
+        var swiper = new Swiper('#swiper_four', {
+             pagination: '.swiper-pagination',
+             slidesPerView: 5,
+             slidesPerColumn: 2,
+             paginationClickable: true,
+        });
+       
+    </script>
+
+
+    <!--主营区域---------------------------------------------->
+    <!--广告区域-->
+    <div class="qq_advert">
+        <a href="http://www.xiaokaikai.cn/jc/zixunliebiao.html" class="qq_advert_left">
+            <img src="./圈圈建材_files/zixun.png" alt="">
+        </a>
+        <div class="qq_advert_right">
+            <a href="http://www.xiaokaikai.cn/jc/zixunliebiao.html">
+                <img src="./圈圈建材_files/zixun000.png" alt="">
+            </a>
+            <a href="http://www.xiaokaikai.cn/jc/zixunliebiao.html" class="qq_advert_left_sm">
+                <img src="./圈圈建材_files/zixun00.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!--推荐商家模块-->
+    <div class="qq_seller">
+        <div class="qq_seller_top">
+            <div class="qq_seller_left f_left">推荐商家</div>
+            <a href="http://www.xiaokaikai.cn/jc/dianpuliebiao.html" class="f_right">更多&gt;</a>
+        </div>
+        <!--循环部分-->
+        <div class="qq_seller_itme clearfix">
+            <a href="http://www.xiaokaikai.cn/jc/dianpuchanpinliebiao.html" class="qq_seller_itme_left f_left">
+                <img src="./圈圈建材_files/shangjia.png" alt="">
+            </a>
+            <div class="qq_seller_itme_center f_left">
+                <a href="http://www.xiaokaikai.cn/jc/dianpuchanpinliebiao.html">
+                    <h4>精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居</h4>
+                    <i class="f_right">1.5km</i>
+                    <span>精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居</span>
+                </a>
+                <div class="itme_inco_s">
+                    <!--循环部分-->
+                    <a href="http://www.xiaokaikai.cn/jc/#" class="itme_inco_s_green">桌椅</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                </div>
+            </div>
+        </div>
+        <div class="qq_seller_itme clearfix">
+            <a href="http://www.xiaokaikai.cn/jc/dianpuchanpinliebiao.html" class="qq_seller_itme_left f_left">
+                <img src="./圈圈建材_files/shangjia.png" alt="">
+            </a>
+            <div class="qq_seller_itme_center f_left">
+                <a href="http://www.xiaokaikai.cn/jc/dianpuchanpinliebiao.html">
+                    <h4>精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居</h4>
+                    <i class="f_right">1.5km</i>
+                    <span>精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居</span>
+                </a>
+                <div class="itme_inco_s">
+                    <!--循环部分-->
+                    <a href="http://www.xiaokaikai.cn/jc/#" class="itme_inco_s_green">桌椅</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                </div>
+            </div>
+        </div>
+        <div class="qq_seller_itme clearfix">
+            <a href="http://www.xiaokaikai.cn/jc/dianpuchanpinliebiao.html" class="qq_seller_itme_left f_left">
+                <img src="./圈圈建材_files/shangjia.png" alt="">
+            </a>
+            <div class="qq_seller_itme_center f_left">
+                <a href="http://www.xiaokaikai.cn/jc/dianpuchanpinliebiao.html">
+                    <h4>精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居</h4>
+                    <i class="f_right">1.5km</i>
+                    <span>精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居</span>
+                </a>
+                <div class="itme_inco_s">
+                    <!--循环部分-->
+                    <a href="http://www.xiaokaikai.cn/jc/#" class="itme_inco_s_green">桌椅</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                </div>
+            </div>
+        </div>
+        <div class="qq_seller_itme clearfix">
+            <a href="http://www.xiaokaikai.cn/jc/dianpuchanpinliebiao.html" class="qq_seller_itme_left f_left">
+                <img src="./圈圈建材_files/shangjia.png" alt="">
+            </a>
+            <div class="qq_seller_itme_center f_left">
+                <a href="http://www.xiaokaikai.cn/jc/dianpuchanpinliebiao.html">
+                    <h4>精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居</h4>
+                    <i class="f_right">1.5km</i>
+                    <span>精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居精美家装家居</span>
+                </a>
+                <div class="itme_inco_s">
+                    <!--循环部分-->
+                    <a href="http://www.xiaokaikai.cn/jc/#" class="itme_inco_s_green">桌椅</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                    <a href="http://www.xiaokaikai.cn/jc/#">餐桌</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--本周推荐-->
+    <div class="qq_week">
+        <div class="qq_week_top">本周推荐</div>
+        <div class="qq_week_center">
+            <a href="http://www.xiaokaikai.cn/jc/chanpinxiangxi.html"><img src="./圈圈建材_files/xuanchuan1.png" alt=""></a>
+            <a href="http://www.xiaokaikai.cn/jc/chanpinxiangxi.html"><img src="./圈圈建材_files/xuanchuan2.png" alt=""></a>
+            <a href="http://www.xiaokaikai.cn/jc/chanpinxiangxi.html"><img src="./圈圈建材_files/xuanchuan3.png" alt=""></a>
+            <a href="http://www.xiaokaikai.cn/jc/chanpinxiangxi.html"><img src="./圈圈建材_files/xuanchuan4.png" alt=""></a>
+        </div>
+    </div>
+    <!--灯饰照明-->
+    <div class="qq_lighting">
+        <div class="qq_lighting_top">
+            <div class="qq_lighting_top_left f_left">灯饰照明</div>
+            <a href="http://www.xiaokaikai.cn/jc/chanpinliebiao.html" class="f_right">更多&gt;</a>
+        </div>
+        <a href="http://www.xiaokaikai.cn/jc/chanpinxiangxi.html" class="qq_lighting_right">
+            <img src="./圈圈建材_files/chanpin1.png" alt="">
+        </a>
+        <div class="qq_lighting_left">
+            <a href="http://www.xiaokaikai.cn/jc/chanpinxiangxi.html" class="qq_lighting_left_sm">
+                <div class="qq_lighting_text">
+                    <h6>沐浴花酒套装</h6>
+                    <span>德国工艺</span>
+                    <i>￥6850</i>
+                </div>
+                <div class="qq_lighting_pic"><img src="./圈圈建材_files/chanpin2.png" alt=""></div>
+            </a>
+            <a href="http://www.xiaokaikai.cn/jc/chanpinxiangxi.html" class="qq_lighting_left_sm">
+                <div class="qq_lighting_text">
+                    <h6>沐浴花酒套装</h6>
+                    <span>德国工艺</span>
+                    <i>￥6850</i>
+                </div>
+                <div class="qq_lighting_pic"><img src="./圈圈建材_files/chanpin2.png" alt=""></div>
+            </a>
+
+        </div>
+    </div>
+    <!--卫浴用品-->
+    <div class="qq_bathroom">
+        <div class="qq_bathroom_top">
+            <div class="qq_bathroom_left f_left">卫浴用品</div>
+            <a href="http://www.xiaokaikai.cn/jc/chanpinliebiao.html" class="f_right">更多&gt;</a>
+        </div>
+        <div class="qq_bathroom_left">
+            <a href="http://www.xiaokaikai.cn/jc/chanpinxiangxi.html" class="qq_bathroom_left_sm">
+                <div class="qq_bathroom_text">
+                    <h6>沐浴花酒套装</h6>
+                    <span>德国工艺</span>
+                    <i>￥6850</i>
+                </div>
+                <div class="qq_bathroom_pic"><img src="./圈圈建材_files/chanpin2.png" alt=""></div>
+            </a>
+            <a href="http://www.xiaokaikai.cn/jc/chanpinxiangxi.html" class="qq_bathroom_left_sm">
+                <div class="qq_bathroom_text">
+                    <h6>沐浴花酒套装</h6>
+                    <span>德国工艺</span>
+                    <i>￥6850</i>
+                </div>
+                <div class="qq_bathroom_pic"><img src="./圈圈建材_files/chanpin2.png" alt=""></div>
+            </a>
+
+        </div>
+        <a href="http://www.xiaokaikai.cn/jc/chanpinxiangxi.html" class="qq_bathroom_right">
+            <img src="./圈圈建材_files/chanpin1.png" alt="">
+        </a>
+
+    </div>
+    <!--猜你喜欢-->
+    <div class="qq_guessYouLike">
+        <div class="qq_guessYouLike_top">猜你喜欢</div>
+        <!--弹出框-->
+        <div class="pop_message"></div>
+        <!--循环部分-->
+        <div class="loop">
+            <div class="qq_guessYouLike_big">
+                <a href="http://www.xiaokaikai.cn/jc/chanpinxiangxi.html" class="qq_guessYouLike_itme">
+                    <div class="qq_guessYouLike_itme_left f_left">
+                        <img src="./圈圈建材_files/chanpin4.png" alt="">
+                    </div>
+                    <div class="qq_guessYouLike_itme_center f_left">
+                        <h4>精美家装精美家装家居家居</h4>
+                        <span>精美家装家居精美家装家居精美家装家居精美家装家居</span>
+                        <i>￥349</i>
+                    </div>
+                </a>
+                <div class="itme_inco f_right">
+                    <ins></ins>
+                    <b>收藏</b>
+                </div>
+            </div>
+            <div class="qq_guessYouLike_big">
+                <a href="http://www.xiaokaikai.cn/jc/chanpinxiangxi.html" class="qq_guessYouLike_itme">
+                    <div class="qq_guessYouLike_itme_left f_left">
+                        <img src="./圈圈建材_files/chanpin4.png" alt="">
+                    </div>
+                    <div class="qq_guessYouLike_itme_center f_left">
+                        <h4>精美家装精美家装家居家居</h4>
+                        <span>精美家装家居精美家装家居精美家装家居精美家装家居</span>
+                        <i>￥349</i>
+                    </div>
+                </a>
+                <div class="itme_inco f_right">
+                    <ins></ins>
+                    <b>收藏</b>
+                </div>
+            </div>
+            <div class="qq_guessYouLike_big">
+                <a href="http://www.xiaokaikai.cn/jc/chanpinxiangxi.html" class="qq_guessYouLike_itme">
+                    <div class="qq_guessYouLike_itme_left f_left">
+                        <img src="./圈圈建材_files/chanpin4.png" alt="">
+                    </div>
+                    <div class="qq_guessYouLike_itme_center f_left">
+                        <h4>精美家装精美家装家居家居</h4>
+                        <span>精美家装家居精美家装家居精美家装家居精美家装家居</span>
+                        <i>￥349</i>
+                    </div>
+                </a>
+                <div class="itme_inco f_right">
+                    <ins></ins>
+                    <b>收藏</b>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--底部固定导航-->
+    <div class="qq_btm_nav">
+        <ul>
+            <li>
+                <a href="http://www.xiaokaikai.cn/jc/index.html">
+                    <i class="qq_btm_nav_bg"><img src="./圈圈建材_files/shouye1.png" alt=""></i>
+                    <span class="qq_btm_nav_text">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.xiaokaikai.cn/jc/dianpuliebiao.html">
+                    <i><img src="./圈圈建材_files/dianpu1.png" alt=""></i>
+                    <span>店铺</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.xiaokaikai.cn/jc/zixunliebiao.html">
+                    <i><img src="./圈圈建材_files/zixun1.png" alt=""></i>
+                    <span>资讯</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.xiaokaikai.cn/jc/chanpinliebiao.html">
+                    <i><img src="./圈圈建材_files/chanpin11.png" alt=""></i>
+                    <span>产品</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.xiaokaikai.cn/jc/wode.html">
+                    <i><img src="./圈圈建材_files/wode1.png" alt=""></i>
+                    <span>我的</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <a href="http://www.xiaokaikai.cn/jc/#qq_layout" class="stick" style="display: none;"><img src="./圈圈建材_files/zhiding.png" alt=""></a>
+</div>
+
+<!--置顶滚动显示，静止2秒隐藏-->
+<script>
+
+    $(window).scroll(function() {
+        $(".stick").show(2000);
+        if($(window).scrollTop()===0){
+            $(".stick").hide();
+        }
+    });
+
+</script>
+
+
+
+</body></html>

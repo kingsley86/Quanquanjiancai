@@ -1,0 +1,107 @@
+/**
+ * Created by Administrator on 2017/3/8.
+ */
+
+//入口函数
+$(function () {
+    /*首页----------------------------------*/
+    /*
+    * 1、首页搜索模块
+    * 功能：搜索
+    * 1、点击搜索按钮、弹出搜索框
+    * 2、中间圈圈建材标题隐藏
+    * 3、搜索框显示
+    * 4、最左端圈圈建材标题显示
+    * 5、在其他任意地方点击搜索框消失
+    * 6、在创建的搜索框中获取焦点不会消失
+    * */
+    var $qqHeaderS=$(".qq_header_s");
+    var $qqHeaderleft=$(".qq_header_left");
+    var $qqHeaderCenter=$(".qq_header_center");
+    var myself=true;
+    $qqHeaderS.on("click", function () {
+        //alert("真好");
+        if(myself){
+            $qqHeaderleft.html("圈圈建材");
+            $qqHeaderCenter.html("<input type='text' placeholder='请输入关键词'/>");
+            //阻止冒泡，点击创建的搜索框不会消失
+            $(".qq_header_center>input").click(function () {
+                return false;
+            })
+            myself=false;
+        }else{
+            //拿到value值
+            $val=$(".qq_header_center>input").val();//获取到了客户输入的内容
+            alert($val);
+            $qqHeaderleft.html("");
+            $qqHeaderCenter.html("圈圈建材");
+            //window.location.href="跳转到结果页面";//直接输入结果页面地址
+            myself=true;
+        }
+        return false;
+    });
+    //在其他任意地方点击搜索框消失
+    $(document).on("click", function () {
+        $qqHeaderleft.html("");
+        $qqHeaderCenter.html("圈圈建材");
+        myself=true;
+    });
+
+    /*
+     * 2、首页收藏模块
+     * 功能：点击收藏弹出提示
+     * 需求：
+     * 1、点击收藏按钮，收藏变成已收藏
+     * 2、左边图标由灰色变成橙色
+     * 3、弹出已收藏提示框
+     * 4、提示框2秒内自动消失
+     * 5、点击已搜藏按钮，取消收藏
+     * 6、弹出取消收藏提示框
+     * 7、提示框2秒内自动消失
+     * */
+    var $myhouse=$(".itme_inco");
+    var $popMes=$(".pop_message");
+    $myhouse.on("touchstart", function () {
+            var shouCangVal = $(this).children('b').text();
+            if(shouCangVal == '收藏'){
+                $(this).children('b').text('已收藏');
+                $(this).children('ins').css({
+                    'backgroundImage':'url(./images/yishoucang.png)'
+                });
+                $popMes.text('已收藏').show(1000);
+                setTimeout(function(){
+                    if($popMes.css("display") == "block"){
+                        $popMes.css({
+                            "display":"none"
+                        })
+                    }
+                },2000);
+            }else{
+                $(this).children('b').text('收藏');
+                $(this).children('ins').css({
+                    'backgroundImage':'url(./images/weishoucang.png)'
+                });
+                $popMes.text('取消收藏').show(1000);
+                setTimeout(function(){
+                    if($popMes.css("display") == "block"){
+                        $popMes.css({
+                            "display":"none"
+                        })
+                    }
+                },2000);
+            }
+        });
+
+
+//<!--切换页面自动刷新一次============================================增-->
+    $("window").resize(function(){
+        location.reload();
+    })
+
+});
+
+
+
+
+
+

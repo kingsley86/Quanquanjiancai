@@ -1,0 +1,68 @@
+/*====== reset css 重置样式  ============*/
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    /*设置所有的盒子的宽度从边框开始计算*/
+    /*在移动端在兼容主流浏览器  必须要兼容的是webkit内核*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /*清除移动端点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    font-size: 14px;
+    font-family: "微软雅黑", "Microsoft YaHei";
+    color: #333;
+}
+
+ul, ol,p,li{
+    list-style: none;
+    border: none;
+    margin: 0px;
+}
+i, b,tt,ins,dd{
+    font-size: 12px;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+a:hover{
+    color: #333;
+}
+
+input,textarea{
+    border: none;
+    outline: none;
+
+    resize: none;/*不让用户自动调整大小 textarea */
+    /*在移动端 清除浏览器默认的效果*/
+    -webkit-appearance: none;/*清除控件默认样式*/
+}
+
+/*====== common css 公共样式 ============*/
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::after,
+.clearfix::before{
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+
+/*//公用隐藏样式*/
+
